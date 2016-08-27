@@ -1,0 +1,153 @@
+/* 
+  quickquiz-v01 
+*/
+
+
+
+$color_dark_blue: #8cb6f2;
+$color_light_blue: #E8F0FC;  // rgba(0,0,255,0.1); rgba(#8cb6f2,0.2);
+$color_light_grey: #fafafa;
+$color_middle_grey: #C5C5C5;
+$color_dark_grey: #616161;
+$color_white: #fff;
+
+$color_circle_bg: $color_light_grey;
+$color_circle_text: $color_middle_grey;
+$color_circle_border: $color_light_blue;
+$color_row_bg: $color_light_grey;
+$color_row_odd_bg: $color_light_grey;
+$color_button_active: $color_dark_blue;
+$color_button_inactive: $color_dark_grey;
+$color_inputfield_bg: $color_light_grey;
+$color_inputfield_bg_focus: $color_white;
+
+
+@mixin transition( $v, $v2 ){
+  -webkit-transition: $v, $v2;
+  -moz-transition: $v, $v2;
+  -o-transition: $v, $v2;
+  transition: $v, $v2;
+}
+
+
+
+div.quickquizv01
+{
+  & > ul {
+    position: relative;
+    display: none;
+    display: block;
+    list-style-type: none;
+    /*font-family: Tahoma;*/
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: #333;
+
+    li {
+      position: relative;
+      padding: 10px;
+      margin: 0 10px 10px 10px;
+      background: $color_row_bg;
+
+      & > span:nth-child(1) {
+        display: block;
+        text-indent: 30px;
+      }
+
+      & > span:nth-child(2) {
+        display: none;
+      }
+
+      &:nth-child(2n+1) {
+        background: $color_row_odd_bg;
+      }
+
+      & > div:nth-child(3) {
+        display: block;
+        position: relative;
+        margin: 10px 5px 5px 5px;
+
+        & > * {
+          box-sizing: border-box;
+          display: inline-block;
+          vertical-align: top;
+          padding: 0 1em;
+          margin: 0;
+          border-radius: 2px;
+          border: 1px solid $color_button_active;
+          outline: none;
+          font-size: 14px;
+          line-height: 28px;
+          height: 28px;
+        }
+
+        & > input:nth-child(1) {
+          width: 20em;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-right: 0;
+          background: $color_inputfield_bg;
+
+          &:focus {
+            border: 1px solid $color_button_active;
+            border-right: 0;
+            box-shadow: 0 0 2px rgba(0,0,0,0.2);
+            background: $color_inputfield_bg_focus;
+          }
+          &.red {
+            color: red;
+          }
+          &.green {
+            color: green;
+          }
+        }
+
+        & > div:nth-child(2) {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          cursor: pointer;
+          background: $color_button_inactive;
+          border-color: $color_button_inactive;
+          /*box-shadow: -5px 0px 5px rgba(0,0,0,0.2) inset;*/
+          text-align: center;
+          /*text-shadow: 0 1px 0 #fff;*/
+          font-size: 12px;
+          line-height: 26px;
+          color: #fff;
+          /*font-weight: 600;*/
+          @include transition(background-color 0.5s cubic-bezier(.39,.58,.57,1), 
+            0.5s cubic-bezier(.39,.58,.57,1));
+
+          &:hover {
+            background: $color_button_active;
+            border-color: $color_button_active;
+          }
+        }
+      }
+
+    }
+
+    .element-number {
+      display: block;
+      position: absolute;
+      top: 5px; left: 5px;
+      width: 1.5em; height: 1.5em;
+      padding: 3px;
+      margin: 0;
+      border-radius: 8888em;
+      background: $color_circle_bg;
+      /*color: rgba(#8cb6f2,0.4);*/
+      color: $color_circle_text;
+      border: 2px solid $color_circle_border;
+      font-weight: bold;
+      font-size: 0.6em;
+      line-height: 1.5em;
+      text-align: center;
+    }
+
+  }
+
+}
+
+
+
