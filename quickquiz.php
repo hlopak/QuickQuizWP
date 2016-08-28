@@ -43,7 +43,7 @@ if ( !function_exists( 'add_action' ) )
   exit;
 }
 
-define( 'QuickQuiz_VERSION', '0.1.91' );
+define( 'QuickQuiz_VERSION', '0.1.92' );
 define( 'QuickQuiz__MINIMUM_WP_VERSION', '4.5.0' );
 define( 'QuickQuiz__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'QuickQuiz_DELETE_LIMIT', 100000 );
@@ -102,14 +102,15 @@ function admin_plugin_scripts()
   global $qq_nonce;
 
   // -- CSS --
-  wp_enqueue_style( 'QuickQuiz-style', plugins_url( "quickquiz/css" ) . '/settings.css' );
+  wp_enqueue_style( 'QuickQuiz-style', plugins_url() . "/" . plugin_basename( __DIR__ ) . '/css/settings.css' );
 
   // -- JS --
-  wp_enqueue_script( 'QuickQuiz-settings-js', plugins_url( "quickquiz/js" ) . '/settings.js' );  
+  wp_enqueue_script( 'QuickQuiz-settings-js', plugins_url() . "/" . plugin_basename( __DIR__ ) . '/js/settings.js' );  
 
   // -- JS variables --
   wp_localize_script( 'QuickQuiz-settings-js', 'QQ_vars', array( 
     'csrf_protector' => $qq_nonce,
+    'this_plugin_url' => plugins_url() . "/" . plugin_basename( __DIR__ ),
   ));
 }
 add_action( 'admin_head', __NAMESPACE__ . '\admin_plugin_scripts' );

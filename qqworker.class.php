@@ -58,8 +58,10 @@ class QQWorker extends QQCore
       if ( $globalQuickQuiz[ 'qqscripts_already_is_on_page' ] !== true )
       {
         $globalQuickQuiz[ 'qqscripts_already_is_on_page' ] = true;
-        $src_css = plugins_url( "quickquiz/css" ) . '/qqshcode.css';
-        $src_js = plugins_url( "quickquiz/js" ) . '/qqshcode.js';
+        // $src_css = plugins_url( "quickquiz/css" ) . '/qqshcode.css';
+        // $src_js = plugins_url( "quickquiz/js" ) . '/qqshcode.js';
+        $src_css = plugins_url() . "/" . plugin_basename( __DIR__ ) . '/css/qqshcode.css';
+        $src_js = plugins_url() . "/" . plugin_basename( __DIR__ ) . '/js/qqshcode.js';
         $str_add_scripts = "<link rel='stylesheet' href='{$src_css}?ver={$ver}' type='text/css' media='all' id='quickquiz-cssstyles' /> \n";
         $str_add_scripts .= "<script type='text/javascript' src='{$src_js}?ver={$ver}' id='quickquiz-jsscripts' async='true'></script> \n";
       }

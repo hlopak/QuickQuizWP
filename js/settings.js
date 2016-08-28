@@ -3,12 +3,14 @@
 */
 
 
-(function(){
+
+(function( O ){
 
 
 let Records = [];
 let ResultHTML = "";
 let CurrentRecord = 1;
+let QQ_vars = O; 
 
 
 /*
@@ -298,7 +300,8 @@ function buildUIListOfRecords( new_list )
   
         addUIElement( node, 'span', '', function( node ){
           node.id = "btn-DelRec" + _num;
-          node.innerHTML = '<img src="/wp-content/plugins/quickquiz/img/173-bin.png" />';
+          // node.innerHTML = '<img src="/wp-content/plugins/quickquiz/img/173-bin.png" />';
+          node.innerHTML = '<img src="' + QQ_vars.this_plugin_url + '/img/173-bin.png" />';
           node.title = "Delete record '" + _alias + "'";
           node._alias = _alias;
           node.className = "buttons-delrec";
@@ -628,7 +631,7 @@ startWhenReady(function(){
   setAllListeners( );
 
 });
-})();
+})( QQ_vars );
 
 
 
