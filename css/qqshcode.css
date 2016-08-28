@@ -35,6 +35,7 @@ div.quickquizv01 > ul {
         border-radius: 2px;
         border: 1px solid #8cb6f2;
         outline: none;
+        font-family: "Open Sans", sans-serif;
         font-size: 14px;
         line-height: 28px;
         height: 28px; }
@@ -87,6 +88,7 @@ div.quickquizv01 > ul {
     /*color: rgba(#8cb6f2,0.4);*/
     color: #C5C5C5;
     border: 2px solid #E8F0FC;
+    font-family: "Open Sans", sans-serif;
     font-weight: bold;
     font-size: 0.6em;
     line-height: 1.5em;
