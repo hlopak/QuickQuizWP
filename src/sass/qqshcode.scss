@@ -154,6 +154,11 @@ div.quickquizv01
 
   }
 
+  ::-webkit-input-placeholder {color:#C5C5C5; font-family: Arial; }
+  ::-moz-placeholder          {color:#C5C5C5; font-family: Arial; }/* Firefox 19+ */
+  :-moz-placeholder           {color:#C5C5C5; font-family: Arial; }/* Firefox 18- */
+  :-ms-input-placeholder      {color:#C5C5C5; font-family: Arial; }
+
 }
 
 
