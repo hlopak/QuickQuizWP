@@ -79,9 +79,11 @@ div.quickquizv01 > ul {
     position: absolute;
     top: 5px;
     left: 5px;
-    width: 1.5em;
-    height: 1.5em;
-    padding: 3px;
+    /*width: 1.5em; height: 1.5em;*/
+    width: 2.3em;
+    height: 2.3em;
+    /*padding: 3px;*/
+    padding: 0;
     margin: 0;
     border-radius: 8888em;
     background: #fafafa;
@@ -91,7 +93,8 @@ div.quickquizv01 > ul {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     font-size: 0.6em;
-    line-height: 1.5em;
+    /*line-height: 1.5em;*/
+    line-height: 1.8em;
     text-align: center; }
 
 /*# sourceMappingURL=qqshcode.css.map */
