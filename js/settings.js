@@ -75,8 +75,10 @@ function getByClassName( classname_str )
 function addUIElement( parent, html_tag_name, html, cb )
 {
   let node = document.createElement( html_tag_name );
-  // node.innerHTML = html;
-  node.outerHTML = html;
+  // console.log( " ~ node==", node, 'html==', html, 'parent==', parent,
+  // 'node.outerHTML==', node.outerHTML, 'node.parentNode==', node.parentNode );
+  // node.outerHTML = html;
+  node.innerHTML = html;
   parent.appendChild( node );
   if ( cb )
     cb( node );
