@@ -43,7 +43,7 @@ if ( !function_exists( 'add_action' ) )
   exit;
 }
 
-define( 'QuickQuiz_VERSION', '0.1.93' );
+define( 'QuickQuiz_VERSION', '0.1.94' );
 define( 'QuickQuiz__MINIMUM_WP_VERSION', '4.5.0' );
 define( 'QuickQuiz__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'QuickQuiz_DELETE_LIMIT', 100000 );
