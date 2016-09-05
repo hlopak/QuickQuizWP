@@ -3,10 +3,11 @@
   QuickQuiz Worker.
 */
 
+namespace QuickQuiz;
+
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-
-namespace QuickQuiz;
 
 
 

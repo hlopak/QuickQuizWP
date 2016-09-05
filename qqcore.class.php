@@ -3,11 +3,11 @@
   QuickQuiz Core.
 */
 
+namespace QuickQuiz;
+
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-
-namespace QuickQuiz;
 
 
 require_once( __DIR__ . '/qqworker.class.php' );
